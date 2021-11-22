@@ -1,0 +1,339 @@
+/**********************************/
+/* Below 1344px (small desktops) */
+/**********************************/
+
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .galary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/**********************************/
+/* Below 1200px (Landscape Tablets) */
+/**********************************/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.2rem;
+  }
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .grid {
+    row-gap: 8.4rem;
+    column-gap: 4.4rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .section-how-it-works {
+    padding: 9.6rem 3.2rem;
+  }
+
+  .testimonials-container {
+    padding: 9.6rem 3.2rem;
+  }
+
+  .section-pricing {
+    padding: 4.8rem 3.2rem;
+  }
+}
+
+/**********************************/
+/* Below 940px (Tablets) */
+/**********************************/
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8.6rem;
+  }
+
+  .hero-img {
+    width: 60%;
+  }
+
+  .hero-text-box {
+    text-align: center;
+  }
+  .hero-image {
+    text-align: center;
+  }
+
+  .delivered-meals {
+    justify-content: center;
+  }
+
+  .logos img {
+    height: 2.4rem;
+  }
+
+  .step-number {
+    font-size: 7.4rem;
+  }
+
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+
+  .section-testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .galary {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .diet-list-item span {
+    line-height: 1.2;
+  }
+
+  .pricing-plan {
+    padding: 3.2rem;
+    width: 80%;
+  }
+
+  .cta {
+    grid-template-columns: 5fr 2fr;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  /* MOBILE NAVIGATION */
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* HIDING NAVIGATION */
+    /* display: none; */
+    /* (display set to none) Does not allow transitions */
+
+    /* to hide it using (Opacity), we must do 
+    a couple od steps */
+
+    /* Hide it Visually */
+    opacity: 0;
+
+    /* make it unaccessible to Mouse and keyboard */
+    pointer-events: none;
+
+    /* Hide is from screen readers */
+    visibility: hidden;
+  }
+
+  /* All the following properties in (.nav-open) 
+will work once we use 'JavaScript' for it */
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .mobile-nav-icon[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .mobile-nav-icon[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+/**********************************/
+/* Below 832px (Tablets) */
+/**********************************/
+
+@media (max-width: 52em) {
+  .grid--cols-3,
+  .grid--cols-4 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .diets {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  .pricing-plan {
+    width: 100%;
+  }
+
+  .meal-content {
+    padding: 2.4rem 2.4rem 2.4rem 2.4rem;
+  }
+
+  .grid--footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .logo-col,
+  .address-col {
+    grid-row: 2;
+    grid-column: span 3;
+  }
+
+  .step-number {
+    font-size: 6.4rem;
+  }
+}
+
+/**********************************/
+/* Below 576px (Mobiles) */
+/**********************************/
+
+@media (max-width: 36em) {
+  .hero {
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.8rem;
+  }
+
+  .logos img {
+    height: 1.6rem;
+  }
+
+  .grid {
+    row-gap: 4.8rem;
+  }
+
+  .grid--cols-2,
+  .grid--cols-3,
+  .grid--cols-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-plan {
+    padding: 1.8rem;
+  }
+
+  .section-how-it-works .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .section-how-it-works {
+    margin-bottom: 4.8rem;
+  }
+
+  .step-img-box {
+    margin-bottom: 3.2rem;
+    transform: translateY(6.4rem);
+  }
+
+  .step-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .galary {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  .section-cta {
+    padding: 4.8rem 4.8rem 9.6rem 4.8rem;
+  }
+
+  .cta {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-text-box {
+    padding: 4.8rem;
+  }
+
+  .cta-img-box {
+    height: 30rem;
+    grid-row: 1;
+  }
+
+  .footer {
+    padding: 9.6rem 7.6rem;
+  }
+}
+
+/**********************************/
+/* Below 440px (Mobiles) */
+/**********************************/
+
+@media (max-width: 28em) {
+  .btn-bottom-marginn {
+    margin-bottom: 3.2rem;
+  }
+
+  .btn-learn-more {
+    display: flex;
+    justify-content: center;
+  }
+}
